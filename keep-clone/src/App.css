@@ -7,6 +7,39 @@
   pointer-events: none;
 }
 
+.form-text{
+  width: 50%;
+  margin: 1rem auto;
+  background: violet;
+}
+.form-text input{
+  margin: 1.2rem;  
+}
+.form-text input,.form-text textarea{
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.form-text button{
+  border: none;
+  background: blueviolet;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+.todo-flex{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.todo-border{
+  border:2px solid blueviolet;
+  width: 20%;
+  margin: 2rem;
+  border-radius: 2rem;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

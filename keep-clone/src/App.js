@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import InputData from './InputData'
 
 function App() {
   return (
     <div className="App">
-      <h1>hiiii</h1>
-    </div>
+      <h1>Notes App</h1>
+      <InputData/>
+      </div>
   );
 }
 
