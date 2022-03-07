@@ -42,13 +42,13 @@
   display: flex;
   align-items: center;
   gap: 1.8rem;
-  padding: 0.2rem 1.5rem;
+  padding: 0.2rem 2rem;
   background: blueviolet;
   color: white;
   cursor: pointer;
 }
 .nav-h{
-  font-size:1.8rem;
+  font-size:2rem;
 }
 .card{
   width: 100vw;
@@ -61,7 +61,7 @@
 .card-img{
   width: 100%;
   height: 60vh;
-  margin: auto;
+  /* margin: auto; */
   border-radius: 1.2rem;
 }
 .card-title{
@@ -80,18 +80,19 @@
 }
 
 
-@media only screen and(min-width: 550px){
+@media screen and (max-width: 550px){
   .card{
-    height: 20vh;
+    height: 30vh;
   }
   .card-img{
-    height: 20vh;
+    height: 30vh;
   }
+  
   .card-title{
-    top: 38vh;
+    top:5vh;
   }
   .card-text{
-    bottom: 50vh;
+    top: 13vh;
   }
 }
   
