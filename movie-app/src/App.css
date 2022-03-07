@@ -78,8 +78,43 @@
   overflow: hidden;
   text-align: left;
 }
+.movies-flex{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin: 1.2rem;
+}
 
-
+.movies-card{
+  width: 20rem;
+  position: relative;
+}
+.movies-img{
+  width: 20rem;
+  height: 18rem;
+  border: 2px solid violet;
+  border-radius: 1.2rem;
+}
+.movies-title{
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  color: white;
+  margin: 0.5rem;
+  font-weight: bolder;
+}
+.btn-primary{
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+  text-align: center;
+}
+.page-flex{
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+}
 @media screen and (max-width: 550px){
   .card{
     height: 30vh;
@@ -93,6 +128,14 @@
   }
   .card-text{
     top: 13vh;
+  }
+}
+@media screen and (max-width: 715px){
+  .movies-card{
+    width: 15rem;
+  }
+  .movies-img{
+    width: 15rem;
   }
 }
   
