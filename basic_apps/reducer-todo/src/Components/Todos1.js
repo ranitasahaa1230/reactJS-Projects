@@ -1,11 +1,8 @@
 import React from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import { FaCheckDouble } from "react-icons/fa";
-import { useTodo } from "../Context/TodoContext";
-import { REMOVE_TODO } from "../Context/action.types";
 
-const Todos = () => {
-    const { todos, dispatch } = useTodo();
+const Todos1 = ({todos,markComplete}) => {
 return (
     <ListGroup className="mt-5 mb-2 items">
       {todos.map(todo => (
@@ -13,7 +10,7 @@ return (
           {todo.todoString}
           <span
             className="float-right" 
-            onClick={() => dispatch({type:"REMOVE_TODO", payload:todo.id})}>
+            onClick={() => markComplete(todo.id)}>
             <FaCheckDouble />
           </span>
         </ListGroupItem>
@@ -22,4 +19,4 @@ return (
   );
 };
 
-export default Todos;
+export default Todos1;

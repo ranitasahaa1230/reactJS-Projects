@@ -9,12 +9,9 @@ import {
 } from "reactstrap";
 
 import { v4 } from "uuid";
-import { useTodo } from "../Context/TodoContext";
-import { ADD_TODO } from "../Context/action.types";
 
-const TodoForm = () => {
+const TodoForm1 = ({addTodos}) => {
     const [todoString,setTodoString]=useState("");
-    const {dispatch}=useTodo();
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -26,10 +23,7 @@ const TodoForm = () => {
               id:v4(),
               todoString
           }
-          dispatch({
-              type:ADD_TODO,
-              payload:todo
-          })
+          addTodos(todo)//method passed as props
           setTodoString("");
     }
     return (
@@ -56,7 +50,7 @@ const TodoForm = () => {
     );
   };
   
-  export default TodoForm;
+  export default TodoForm1;
   
 
 
