@@ -17,6 +17,7 @@ function App() {
     })
     if(isAlreadyAdded!==-1){
       toast("Already added",{type:"error"})
+      // return;//not to add more items
     }
     setCartItems([...cartItems,item])////if not there
 
