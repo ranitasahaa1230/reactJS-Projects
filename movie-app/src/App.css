@@ -82,27 +82,39 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
-  justify-content: center;
+  /* justify-content: center; */
   margin: 1.2rem;
 }
 
 .movies-card{
   width: 20rem;
   position: relative;
+  height: 25rem;
+  background: #282c34;
+  /* border-radius: 2rem; */
 }
 .movies-img{
-  width: 20rem;
-  height: 18rem;
+  width: 18rem;
+  height: 20rem;
   border: 2px solid violet;
   border-radius: 1.2rem;
 }
-.movies-title{
-  position: absolute;
-  top: 10%;
-  left: 2%;
+.movie-error{
+  margin: 5rem;
+  color: rgb(224, 75, 75);
+}
+.movie-details{
+  margin:0 2rem;
   color: white;
-  margin: 0.5rem;
-  font-weight: bolder;
+}
+.movies-title{
+  font-size: 1rem;
+}
+.movies-year{
+  font-size: larger;  
+}
+.movies-card p{
+  text-transform: capitalize;
 }
 .btn-primary{
   position: absolute;
