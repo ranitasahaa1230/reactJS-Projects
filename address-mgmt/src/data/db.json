@@ -1,0 +1,22 @@
+{
+    "address":[
+        {
+            "id":"izyf",
+            "name":"RS",
+            "mobile-no":9812345789,
+            "city":"Kolkata",
+            "address":"C.R.C",
+            "pincode":700032,
+            "state":"West Bengal"
+        },
+        {
+            "id":"igyh",
+            "name":"SS",
+            "mobile-no":9818945789,
+            "city":"Delhi",
+            "address":"C.R Colony",
+            "pincode":700039,
+            "state":"Haryana"
+        }
+    ]
+}
