@@ -1,112 +1,14 @@
-.App {
-  display: flex;
-  padding: 2rem;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+form input{
+  width: 80%;
+  padding: 0.8rem;
+  margin: 0.5rem;
 }
 
-/* FormInput CSS */
-
-.form-input {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 1rem;
-  width: 100%;
-  max-width: 75vw;
-  gap: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: var(--white-color);
+form{
+  margin:2rem;
 }
-
-.form-row {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.form-column {
-  flex-grow: 1;
-}
-.form-input-field {
-  width: 100%;
-  flex-grow: 1;
-  border-radius: 0.25rem;
-  padding: 0.75rem;
-  outline: none;
-  border: 2px solid var(--grey-200);
-  transition: 0.3s all ease;
-  font-size: 1rem;
-}
-.form-input-field::placeholder {
-  color: var(--text-secondary-color);
-}
-.text-area {
-  resize: none;
-}
-.form-input-field:hover {
-  outline: none;
-  border: 0.125rem solid var(--secondary-color);
-}
-.form-input-field:focus {
-  outline: none;
-  border: 0.125rem solid var(--primary-color);
-}
-
-/*CustomerAddress.CSS*/
-.ph-no-section {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.address-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.city-state-section {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.list-stacked-item {
-  gap: 0.5rem;
-}
-.address-footer {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.address-footer button {
-  flex-grow: 1;
-}
-
-/*AddressList.CSS*/
-.address-list {
-  width: 75vw;
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-@media screen and (max-width: 750px) {
-  .form-input {
-    max-width: 90vw;
-  }
-  .address-list {
-    max-width: 90vw;
-  }
-}
-
-/* FormInputController */
-.controller-container {
-  display: flex;
-  gap: 2rem;
-  width: 75vw;
-  align-items: center;
-  border: 2px solid var(--primary-color);
-  padding: 1rem;
-  border-radius: 0.25rem;
-  cursor: pointer;
+form button{
+  width: 20%;
+  padding: 0.6rem;
+  margin: 1rem 2.5rem;
 }
