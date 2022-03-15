@@ -1,38 +1,35 @@
 import React, { useState } from "react";
 import AddressForm from "./AddressForm";
-import { deleteHandler } from "./utilities";
+// import { deleteHandler } from "./utilities";
 
-export default function AddressList({addresses,address,setAddress,setDisplayFormToggle}) {
-  const [isEditing, setIsEditing] = useState(false);
+export default function AddressList({
+  addresses,
+  address,
+  setAddress,
+  setDisplayFormToggle, formValues
+}) {
 
+  const deleteHandler=(id)=>{
+    setAddress(address.filter((item)=>item.id!==id))
+  }
+  const editFormHandler=(id)=>{
+    const editTodo=address.find((item)=>item.id===id)
+    console.log(editTodo.formValues);
+    setAddress(editTodo)
+  }
   return (
     <div>
-      {!isEditing ? (
-        <div>
-          <h3> {addresses.name} </h3>
-          <p>
-            {" "}
-            {addresses.address} {addresses.city} {addresses.state}
-          </p>
-          <p>{addresses.country}</p>
-          <p>{addresses.phone}</p>
-          <button onClick={() => setIsEditing(true)}>Edit</button>
-          <button
-            onClick={() => deleteHandler(addresses.id, address, setAddress)}
-          >
-            Delete
-          </button>
-        </div>
-      ) : (
-        <AddressForm
-          defaultAddress={address}
-          address={address}
-          setAddress={setAddress}
-          setDisplayFormToggle={setDisplayFormToggle}
-          isEditing={isEditing}
-          setIsEditing={setIsEditing}
-        />
-      )}
+      <div>
+        <h3> {addresses.name} </h3>
+        <p>
+          {" "}
+          {addresses.address} {addresses.city} {addresses.state}
+        </p>
+        <p>{addresses.country}</p>
+        <p>{addresses.phone}</p>
+        <button onClick={() => editFormHandler(addresses.id)}>Edit</button>
+        <button onClick={() => deleteHandler(addresses.id)}>Delete</button>
+      </div>
     </div>
   );
 }

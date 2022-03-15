@@ -1,31 +1,30 @@
+import axios from 'axios';
 import React, { useState } from 'react'
-import { addFormHandler, editFormHandler } from "./utilities";
+import AddressList from './AddressList';
+// import { addFormHandler, editFormHandler } from "./utilities";
 
-export default function AddressForm({defaultAddress, address, setAddress, setDisplayFormToggle,isEditing = false,
-  setIsEditing = null}) {
+export default function AddressForm({defaultAddress, address, setAddress, setDisplayFormToggle,}) {
   const dummyData = {
-    name: "Ranita",
+    name: "XYZ",
     address: "PLOT 9999",
     city: "Kolkata",
     state: "WB",
     country: "India",
     phone: "9099"
   };
+  const DataAPI = "https://62188b391a1ba20cbaa3c9ce.mockapi.io/api/users";
   const [formValues, setFormValues] = useState(defaultAddress);
   const changeHandler=(e)=>{
     const {name,value}=e.target;
     setFormValues((prev)=>({...prev,[name]:value}))
   }
-  const submitHandler=(e)=>{
+  const submitHandler=async (e)=>{
       e.preventDefault();
-      setDisplayFormToggle(false);
-    if (!isEditing) {
-      addFormHandler(formValues, setAddress);
-    } else {
-      editFormHandler(formValues, address, setAddress);
-      setIsEditing(false);
-    }
-  }
+      const response=await axios.post(DataAPI,formValues)
+      if (response.status === 201) {
+        setAddress((prev)=>prev.concat(response.data))
+        setFormValues('')
+  }}
   return (
     <div>
       <form className="form-container flex-column gap-s">
@@ -85,7 +84,7 @@ export default function AddressForm({defaultAddress, address, setAddress, setDis
         <button
           onClick={(e) => {
             e.preventDefault();
-            isEditing ? setIsEditing(false) : setDisplayFormToggle(false);
+            
           }}
           className="btn btn-primary-outline"
         >
@@ -102,6 +101,7 @@ export default function AddressForm({defaultAddress, address, setAddress, setDis
         </button>
       </div>
     </form>
+    <AddressList formValues={formValues}/>
     </div>
   )
 }
