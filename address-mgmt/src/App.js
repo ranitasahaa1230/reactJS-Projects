@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "./components/Header";
 import ErrorHeader from "./components/ErrorHeader";
-import FormController from "./components/FormController";
+import AddressForm from "./components/AddressForm";
+import AddressList from "./components/AddressList";
 
 function App() {
   const [address, setAddress] = useState([]);
@@ -40,9 +41,32 @@ function App() {
   return (
     <div className="App">
       {!error ? <Header /> : <ErrorHeader/>}
-      
+      <button
+        onClick={() => setDisplayFormToggle(true)}
+        className="btn btn-primary-solid"
+      >
+        + Add new address{" "}
+      </button>
+      {displayForm && (
+        <AddressForm
+          defaultAddress={defaultAddress}
+          address={address}
+          setAddress={setAddress}
+          setDisplayFormToggle={setDisplayFormToggle}
+        />
+      )}
+      {address.map((addresses, id) => {
+        return (
+          <AddressList
+            key={id}
+            addresses={addresses}
+            address={address}
+            setAddress={setAddress}
+            setDisplayFormToggle={setDisplayFormToggle}
+          />
+        );
+      })}
     </div>
   );
 }
-
 export default App;
