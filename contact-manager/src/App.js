@@ -15,7 +15,6 @@ function App() {
     country: "",
     mobile: "",
   };
-  const [userInput, setUserInput] = useState(initialUserObj);
   const [contacts, setContacts] = useState([]);
   const [showForm, setShowForm] = useState(false);
 
@@ -33,8 +32,6 @@ function App() {
       <h1>Address Management</h1>
       {showForm ? (
         <AddressForm
-          userInput={userInput}
-          setUserInput={setUserInput}
           initialUserObj={initialUserObj}
           contacts={contacts}
           setContacts={setContacts}

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { addFormHandler, editFormHandler } from './utilities';
 
-export default function AddressForm({userInput, setUserInput, initialUserObj,setShowForm, contacts, setContacts, 
+export default function AddressForm({initialUserObj,setShowForm, contacts, setContacts, 
   isEditing=false, setIsEditing=null}) {
+    const [userInput, setUserInput] = useState(initialUserObj);
+
   const dummyData = {
     name: "Ranita",
     address: "PLOT 999",
@@ -20,7 +22,7 @@ export default function AddressForm({userInput, setUserInput, initialUserObj,set
       const submitForm=(e)=>{
         e.preventDefault();
         setShowForm(false)
-        if(!isEditing)
+        if(!isEditing)//true=>
         addFormHandler(userInput,setContacts)
         else{
           editFormHandler(userInput,contacts,setContacts)

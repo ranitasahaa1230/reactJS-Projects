@@ -5,7 +5,7 @@ import { deleteHandler } from './utilities'
 export default function AddressDisplay({contact, contacts, setContacts, setShowForm}) {
   const [isEditing, setIsEditing] = useState(false);
   let addressContent;
-  if(!isEditing){
+  if(!isEditing){//true hole form display with edit delete
     addressContent=(
       <>
         <p>{contact.name}</p>
