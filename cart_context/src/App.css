@@ -1,0 +1,44 @@
+.App {
+  font-family: Cambria;
+  margin: 0 2rem;
+}
+
+.card {
+  width: 15rem;
+  border: 2px solid whitesmoke;
+  margin: 1.2rem;
+  border-radius: 8px;
+}
+.card:hover {
+  border: 2px solid blueviolet;
+  transform: scale(1.1);
+}
+.card img {
+  width: 15rem;
+  object-fit: cover;
+}
+
+.card p {
+  margin: 5px 12px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.card div {
+  margin: 5px 1rem;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.card button {
+  margin: 5px 8px;
+  width: 90%;
+  padding: 0.4rem;
+  background: violet;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.products-desc {
+  display: flex;
+  flex-wrap: wrap;
+}
