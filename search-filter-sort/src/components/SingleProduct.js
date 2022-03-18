@@ -7,7 +7,7 @@ export default function SingleProduct({ prod }) {
     state: { cart },
     dispatch,
   } = useProducts();
-  console.log(cart)
+//   console.log(cart)
   return (
     <div className="products">
       <Card>

@@ -6,7 +6,7 @@ import { useProducts } from '../contexts/Context'
 import { AiFillDelete } from "react-icons/ai";
 
 export default function Header() {
-  const {state:{cart},dispatch}=useProducts();
+  const {state:{cart},dispatch, productDispatch}=useProducts();
   return (
     <Navbar bg="dark" variant="dark" style={{height:80}}>
     <Container>
@@ -14,7 +14,9 @@ export default function Header() {
             <Link to='/'>Shopping Cart</Link>
       </Navbar.Brand>
       <Navbar.Text className='search'>
-            <FormControl style={{width:400}} placeholder="Search a product" className='m-auto'/>
+            <FormControl style={{width:400}} placeholder="Search a product" className='m-auto'
+              onChange={(e)=>productDispatch({type:"FILTER_BY_SEARCH",payload:e.target.value})}
+            />
       </Navbar.Text>
       <Nav>
       <Dropdown>
