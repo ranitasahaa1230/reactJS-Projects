@@ -1,39 +1,17 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import './App.css';
-
-const productAPI = "https://62188b391a1ba20cbaa3c9ce.mockapi.io/api/products";
+import Cart from "./components/Cart";
+import Header from "./components/Header";
+import Products from "./components/Products";
 
 export default function App() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const productsList = await axios.get(productAPI);
-        setProducts(productsList.data);
-      } catch (error) {
-        console.log("error", error.description);
-      }
-    })();
-  }, []);
-
   return (
     <div className="App">
-      <h2>Showing all Products(20)</h2>
-      <div className="products-desc">
-        {products &&
-          products.map((prod) => {
-            return (
-              <div key={prod.id} className="card">
-                <img src={prod.image} alt="products" />
-                <p>{prod.name}</p>
-                <div>{prod.price}</div>
-                <button>Add to Cart</button>
-              </div>
-            );
-          })}
-      </div>
+    <Header/>
+      <Routes>
+        <Route path="/" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </div>
   );
 }

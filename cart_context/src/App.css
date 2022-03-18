@@ -42,3 +42,18 @@
   display: flex;
   flex-wrap: wrap;
 }
+.prod{
+  cursor: pointer;
+}
+.nav{
+  background-color: black;
+  height: 40px;
+  font-size: 2rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: space-evenly;
+}
+.prod1{
+  color: white;
+  text-decoration: none;
+}
