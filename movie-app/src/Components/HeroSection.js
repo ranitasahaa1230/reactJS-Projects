@@ -27,6 +27,8 @@ export default function HeroSection({loader,setLoader,movies,setMovies}) {
   return (
     <div>
         <div className='nav-flex'>
+        <img src="../assets/images/home-logo.png
+        "/>
         <h1>Movies App</h1>
         <h2 className='nav-h'>Favourites</h2>
         <input type="text" placeholder='Search your favorite movies' value={inputText} onChange={(e)=>setInputText(e.target.value)}/>
