@@ -2,6 +2,6 @@
 
 .app__container{
     display: flex;
-    height: 90vh;
-    margin-top: 4.5rem;
+    /* height: 90vh; */
+    margin-top: 10vh;
 }
