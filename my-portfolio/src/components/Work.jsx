@@ -40,6 +40,7 @@ export const Work = () => {
               </div>
             </div>
           </div>
+          
           <div
             style={{ backgroundImage: `url(${realEstate})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'

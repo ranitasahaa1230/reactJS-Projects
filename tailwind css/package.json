@@ -1,13 +1,13 @@
 {
-  "dependencies": {
-    "tailwindcss": "^3.0.24"
-  },
   "name": "tailwind-css",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tailwindcss -i ./input.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./input.css -o ./css/main.css --watch"
   },
   "author": "",
   "license": "ISC",
