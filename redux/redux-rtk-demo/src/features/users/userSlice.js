@@ -9,10 +9,10 @@ const initialState = {
 }
 
 // Generates pending, fulfilled and rejected action types
-const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
+export const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
   return axios
     .get('https://jsonplaceholders.typicode.com/users')
-    .then(response => response.data.map(user => user.id))
+    .then(response => response.data)
 })
 
 export const userSlice = createSlice({
