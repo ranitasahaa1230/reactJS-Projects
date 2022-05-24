@@ -1,14 +1,18 @@
-import './App.css';
-import LoginPage from './Components/LoginPage/LoginPage';
-import Home from './Components/HomePage/Home';
+import "./styles/App.scss";
+import Navigation from "./components/Navigation";
+import Cards from "./components/Cards";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <div className="App">
-      {
-          (localStorage.getItem("users")==undefined ||  localStorage.getItem("users")== null)?
-          <LoginPage/> : <Home/>
-      }
+      <Navigation />
+      <main>
+        <div className="container">
+          <Cards />
+          <Sidebar />
+        </div>
+      </main>
     </div>
   );
 }
