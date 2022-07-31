@@ -5,11 +5,11 @@ import "./Home.css";
 export const Home = () => {
   return (
     <main>
-      <div class="container">
+      {/* <div class="container"> */}
         <LeftSidebar/>
         <MiddleGrid/>
         <RightSidebar/>
-      </div>
+      {/* </div> */}
     </main>
   );
 };
